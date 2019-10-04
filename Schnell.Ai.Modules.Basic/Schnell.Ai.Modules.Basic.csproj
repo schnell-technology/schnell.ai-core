@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="12.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Schnell.Ai.Sdk.Components\Schnell.Ai.Sdk.Components.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Shared\Schnell.Ai.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

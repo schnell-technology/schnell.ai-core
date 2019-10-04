@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Shared\Schnell.Ai.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

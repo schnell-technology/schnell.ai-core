@@ -1,0 +1,115 @@
+{
+  "Version": "1.0",
+  "Variables": {
+    "DefaultModel": "myModel"
+  },
+  "Artifacts": {
+    "Models": [
+      {
+        "Name": "myModel",
+        "FilePath": "model.zip"
+      }
+    ],
+    "DataSets": [
+      {
+        "Name": "trainData",
+        "Importer": {
+          "Type": "Schnell.Ai.DataSets.Importer.CsvFile",
+          "Configuration": {
+            "InputDirectory": "C:\\temp\\testfiles",
+            "FileFilter": "*.tsv",
+            "CsvSeparator": ";"
+          }
+        },
+        "FieldDefinition": [
+          {
+            "Field": "Class",
+            "IsLabel": true
+          },
+          {
+            "Field": "PWidth",
+            "IsFeature": true
+          },
+          {
+            "Field": "PHeight",
+            "IsFeature": true
+          }
+        ]
+      },
+      {
+        "Name": "testResultData",
+        "Exporter": {
+          "Type": "Schnell.Ai.DataSets.Exporter.CsvFile",
+          "Configuration": {
+            "OutputFile": "C:\\temp\\testfiles\result_.tsv"
+          }
+        },
+        "FieldDefinition": [
+          {
+            "Field": "Class",
+            "IsLabel": true
+          },
+          {
+            "Field": "Score",
+            "IsScore": true
+          },
+          {
+            "Field": "PWidth",
+            "IsFeature": true
+          },
+          {
+            "Field": "PHeight",
+            "IsFeature": true
+          }
+        ]
+      },
+      {
+        "Name": "evaluationData",
+        "Importer": {
+          "Type": "Schnell.Ai.DataSets.Importer.SqlServer",
+          "Configuration": {
+            "ConnectionString": "localhost\\sqlexpress;DATABASE='meineTestdatenbank'",
+            "Query": "SELECT * from view_bestellungen WHERE predicted is null"
+          }          
+        }
+      }
+    ]
+  },
+  "Actions": [
+    {
+      "Trainer": {
+        "Name": "trainer1",
+        "Type": "Schnell.Ai.Trainers.MultiClassification",
+        "Configuration": {},
+        "TrainDataSet":  "trainData",
+        "Model": "myModel"
+      }
+    },
+    {
+      "Tester": {
+        "Name": "tester1",
+        "Type": "Schnell.Ai.Testers.MultiClassification",
+        "Model": "myModel",
+        "TestDataSet": "trainData",
+        "TestResultDataSet": "testResultData"
+      }
+    },
+    {
+      "Evaluator": {
+        "Name": "evaluator1",
+        "Type": "Schnell.Ai.Evaluators.MultiClassification",
+        "Model": "myModel",
+        "InputDataSet":  ""
+      }
+    }
+
+  ],
+  "Pipelines": [
+    {
+      "Name": "default",
+      "Pipe": [
+        { "RunAction": "trainer1" }
+      ]
+    }
+  ]
+}

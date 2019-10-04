@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schnell.Ai", "Schnell.Ai\Schnell.Ai.csproj", "{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schnell.Ai.Shared", "Schnell.Ai.Shared\Schnell.Ai.Shared.csproj", "{565C2AC2-3595-447B-A4ED-FE111E9780A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtimes", "Runtimes", "{52DEA25B-088E-49D2-BDD7-92D712CED340}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{60661CA3-3C8B-44C7-A5FC-FD63FDC593C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schnell.Ai.Runtime", "Schnell.Ai.Runtime\Schnell.Ai.Runtime.csproj", "{75D6AE71-065B-4C9E-BFA1-44A70746240F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schnell.Ai.Sdk", "Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj", "{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sdk", "Sdk", "{3E49C7D1-3582-4D0F-8D1C-70332C69007E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schnell.Ai.Sdk.Components", "Schnell.Ai.Sdk.Components\Schnell.Ai.Sdk.Components.csproj", "{6B1EA6BE-433F-4778-BC8C-1D807B56E461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565C2AC2-3595-447B-A4ED-FE111E9780A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565C2AC2-3595-447B-A4ED-FE111E9780A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565C2AC2-3595-447B-A4ED-FE111E9780A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565C2AC2-3595-447B-A4ED-FE111E9780A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D6AE71-065B-4C9E-BFA1-44A70746240F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D6AE71-065B-4C9E-BFA1-44A70746240F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D6AE71-065B-4C9E-BFA1-44A70746240F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D6AE71-065B-4C9E-BFA1-44A70746240F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1EA6BE-433F-4778-BC8C-1D807B56E461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1EA6BE-433F-4778-BC8C-1D807B56E461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1EA6BE-433F-4778-BC8C-1D807B56E461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1EA6BE-433F-4778-BC8C-1D807B56E461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AF50BB8-B412-4A7D-A7B5-53E16E0B3758} = {52DEA25B-088E-49D2-BDD7-92D712CED340}
+		{565C2AC2-3595-447B-A4ED-FE111E9780A3} = {60661CA3-3C8B-44C7-A5FC-FD63FDC593C9}
+		{75D6AE71-065B-4C9E-BFA1-44A70746240F} = {60661CA3-3C8B-44C7-A5FC-FD63FDC593C9}
+		{D942F8FC-EB3A-4BE2-9F57-51A2E98884AC} = {3E49C7D1-3582-4D0F-8D1C-70332C69007E}
+		{6B1EA6BE-433F-4778-BC8C-1D807B56E461} = {3E49C7D1-3582-4D0F-8D1C-70332C69007E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B91820FC-A872-41DE-9B67-3C3442FD07D8}
+	EndGlobalSection
+EndGlobal

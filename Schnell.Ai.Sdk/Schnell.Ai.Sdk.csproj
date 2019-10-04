@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.9.1</Version>
+    <Authors>schnell.technology</Authors>
+    <Company>schnell.technology</Company>
+    <Product>schnell.AI</Product>
+    <Description>SDK for schnell.AI actions, models and artifacts.</Description>
+    <Copyright>© 2019 Patrick Schnell.</Copyright>
+    <PackageProjectUrl>https://schnell.ai/</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/schnell-technology/schnell.ai-core</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Schnell.Ai.Shared\Schnell.Ai.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ModuleSpec\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

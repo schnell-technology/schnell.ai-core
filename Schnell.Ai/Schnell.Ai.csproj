@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Version>0.9.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.9" />
+    <PackageReference Include="ConsoleTables" Version="2.3.0" />
+    <PackageReference Include="McMaster.NETCore.Plugins" Version="0.3.0" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="semver" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Schnell.Ai.Runtime\Schnell.Ai.Runtime.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Sdk.Components\Schnell.Ai.Sdk.Components.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj" />
+    <ProjectReference Include="..\Schnell.Ai.Shared\Schnell.Ai.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
