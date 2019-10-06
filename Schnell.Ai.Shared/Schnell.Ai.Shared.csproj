@@ -4,11 +4,26 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.9.1</Version>
+    <Authors>schnell.technology</Authors>
+    <Company>schnell.technology</Company>
+    <Product>schnell.AI</Product>
+    <Description>Base classes for the schnell.AI SDK-Packages</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://schnell.ai/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/schnell-technology/schnell.ai-core</RepositoryUrl>
+    <PackageIconUrl>https://schnell.ai/assets/icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="NJsonSchema" Version="10.0.24" />
     <PackageReference Include="System.Reflection.Emit" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

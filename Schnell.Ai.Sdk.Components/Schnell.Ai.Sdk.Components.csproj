@@ -13,10 +13,19 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/schnell-technology/schnell.ai-core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageIconUrl>https://schnell.ai/assets/icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
