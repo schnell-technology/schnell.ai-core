@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Schnell.Ai.Sdk.Logging;
+﻿using Schnell.Ai.Sdk.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
