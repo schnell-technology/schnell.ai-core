@@ -33,11 +33,20 @@ namespace Schnell.Ai.Runtime.Repositories
         /// <param name="module">module-name</param>
         /// <param name="version">version of module</param>
         /// <returns></returns>
-        public async virtual Task<bool> Exists(string module, string version)
+        public async virtual Task<RepositoryResult> Exists(string module, string version = null)
         {
+            if(version == null)
+                return null;
+
+            if(version != null)
+                version = version.ToLowerInvariant();
+                
             var filePath = System.IO.Path.Combine(fileBasePath, $"{module}_{version}.zip");
             var dirPath = System.IO.Path.Combine(fileBasePath, module, version);
-            return System.IO.File.Exists(filePath) || System.IO.Directory.Exists(dirPath);
+            var exists = System.IO.File.Exists(filePath) || System.IO.Directory.Exists(dirPath);
+            if (exists)
+                return new RepositoryResult() { ModuleName = module, Version = version };
+            return null;
         }
 
         /// <summary>
@@ -46,8 +55,14 @@ namespace Schnell.Ai.Runtime.Repositories
         /// <param name="module">module-name</param>
         /// <param name="version">version of module</param>
         /// <returns></returns>
-        public async virtual Task FindAndExtractOrigin(string module, string version)
+        public async virtual Task FindAndExtractOrigin(string module, string version = null)
         {
+            if(version == null)
+                throw new Exception("Version is required");
+
+            if(version != null)
+                version = version.ToLowerInvariant();
+
             var filePath = System.IO.Path.Combine(fileBasePath, $"{module}_{version}.zip");
             var dirPath = System.IO.Path.Combine(fileBasePath, module, version);
 

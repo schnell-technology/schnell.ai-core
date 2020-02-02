@@ -39,7 +39,7 @@ namespace Schnell.Ai.Shared.Helper
         {
             if (t != null)
             {
-                var schema = JsonSchema.FromType(t, new NJsonSchema.Generation.JsonSchemaGeneratorSettings() { FlattenInheritanceHierarchy=true });
+                var schema = JsonSchema.FromType(t, new NJsonSchema.Generation.JsonSchemaGeneratorSettings() { FlattenInheritanceHierarchy = true });
                 var jschema = schema.ToJson(Formatting.Indented);
                 return schema;
             }
@@ -91,11 +91,21 @@ namespace Schnell.Ai.Shared.Helper
         /// <param name="json">JSON-string</param>
         /// <param name="settings">Settings for serialization</param>
         /// <returns>Object of type T</returns>
-        public static T Deserialize<T>(string json, JsonSerializerSettings settings = null)
+        public static T Deserialize<T>(string json, JsonSerializerSettings settings = null, bool returnDefaultOnError = false)
         {
             if (settings == null)
                 settings = Settings;
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json, settings);
+
+            try
+            {
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json, settings);
+            }
+            catch
+            {
+                if (returnDefaultOnError)
+                    return default(T);
+                else throw;
+            }
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ namespace Schnell.Ai.Runtime
         internal static async Task<bool> LoadReference(Logger log, string module, string version)
         {
             //local project-modules
-            var localPath = System.IO.Path.Combine(System.Environment.CurrentDirectory, "ai_modules", module, version, $"{module}.dll");
+            var localPath = System.IO.Path.Combine(System.Environment.CurrentDirectory, "ai_modules", module, version ?? "0.0", $"{module}.dll");
 
             if (!System.IO.File.Exists(localPath))
             {
@@ -40,8 +40,11 @@ namespace Schnell.Ai.Runtime
                 {
                     try
                     {
-                        if (await repo.Exists(module, version))
+                        var result = await repo.Exists(module, version);
+                        if (result != null)
                         {
+                            version = result.Version;
+                            localPath = System.IO.Path.Combine(System.Environment.CurrentDirectory, "ai_modules", module, version ?? "0.0", $"{module}.dll");
                             await repo.FindAndExtractOrigin(module, version);
                             if (System.IO.File.Exists(localPath))
                                 break;

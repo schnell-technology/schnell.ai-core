@@ -1,12 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Schnell.Ai.Sdk\Schnell.Ai.Sdk.csproj" />
     <ProjectReference Include="..\Schnell.Ai.Shared\Schnell.Ai.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="semver" Version="2.0.6" />
   </ItemGroup>
 
 </Project>

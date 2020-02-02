@@ -17,7 +17,9 @@ namespace Schnell.Ai.CliCommands
             Project.Register(app);
             Repository.Register(app);
             Runner.Register(app);
-            Module.Register(app);            
+            Module.Register(app);         
+            Development.Register(app);
+            Common.Register(app);   
         }
     }
 }

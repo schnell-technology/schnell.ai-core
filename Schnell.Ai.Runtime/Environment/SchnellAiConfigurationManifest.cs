@@ -31,7 +31,9 @@ namespace Schnell.Ai.Runtime.Environment
             get
             {
                 var def = new SchnellAiConfigurationManifest();
-                def.Repositories.Add("https://repo.schnell.ai/");
+                //def.Repositories.Add("https://repo.schnell.ai/");
+                def.Repositories.Add("https://raw.githubusercontent.com/schnell-technology/schnell.ai-modules/master/");
+                
 
                 return def;
             }

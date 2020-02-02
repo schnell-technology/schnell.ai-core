@@ -21,7 +21,7 @@ namespace Schnell.Ai.Runtime.Repositories
         /// <param name="module">module-name</param>
         /// <param name="version">version-id</param>
         /// <returns></returns>
-        Task<bool> Exists(string module, string version);
+        Task<RepositoryResult> Exists(string module, string version = null);
 
         /// <summary>
         /// Find module and extract to module-directory
@@ -29,6 +29,6 @@ namespace Schnell.Ai.Runtime.Repositories
         /// <param name="module">module-name</param>
         /// <param name="version">version-id</param>
         /// <returns></returns>
-        Task FindAndExtractOrigin(string module, string version);
+        Task FindAndExtractOrigin(string module, string version = null);        
     }
 }

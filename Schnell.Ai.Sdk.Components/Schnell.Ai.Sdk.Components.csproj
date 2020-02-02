@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.9.1</Version>
+    <Version>1.0.0</Version>
     <Authors>schnell.technology</Authors>
     <Company>schnell.technology</Company>
     <Product>schnell.AI</Product>
     <Description>Predefined base-classes for schnell.AI processors including trainer, tester and evaluators.</Description>
-    <Copyright>© 2019 Patrick Schnell.</Copyright>
+    <Copyright>© 2020 Patrick Schnell.</Copyright>
     <PackageProjectUrl>https://schnell.ai/</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/schnell-technology/schnell.ai-core</RepositoryUrl>

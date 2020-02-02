@@ -105,7 +105,7 @@ namespace Schnell.Ai.CliCommands
 
                 command.OnExecute(async () =>
                 {
-                    if(moduleName.Value != null && version.Value != null)
+                    if(moduleName.Value != null)
                     {
                         var file = "ai.project.json";
                         if (!System.IO.File.Exists(file))
@@ -145,7 +145,7 @@ namespace Schnell.Ai.CliCommands
             }));
 
             app.Command("module-rm", (command => {
-                command.Description = "Install module and add it to the ai.project.json";
+                command.Description = "Remove existing module";
                 command.HelpOption("-?|-h|--help");
 
                 var moduleName = command.Argument("module", "module-name", false);                

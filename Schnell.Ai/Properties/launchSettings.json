@@ -18,8 +18,8 @@
     },
     "Schnell.Ai": {
       "commandName": "Project",
-      "commandLineArgs": "run --pipeline evaluateonly",
-      "workingDirectory": "C:\\temp\\demo-project",
+      "commandLineArgs": "module-i Schnell.Ai.Actions.Prediction",
+      "workingDirectory": "C:\\temp\\dnp-example",
       "launchUrl": "api/values",
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }

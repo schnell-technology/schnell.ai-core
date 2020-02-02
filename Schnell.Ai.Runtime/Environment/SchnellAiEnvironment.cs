@@ -8,14 +8,14 @@ namespace Schnell.Ai.Runtime.Environment
     /// <summary>
     /// Local schnell.ai-environment
     /// </summary>
-    internal static class SchnellAiEnvironment
+    public static class SchnellAiEnvironment
     {
         private static string _tempDir = null;
 
         /// <summary>
         /// Environment directory
         /// </summary>
-        internal static string EnvironmentDir
+        public static string EnvironmentDir
         {
             get
             {
@@ -26,7 +26,7 @@ namespace Schnell.Ai.Runtime.Environment
         /// <summary>
         /// Temporary directory
         /// </summary>
-        internal static string TempDir
+        public static string TempDir
         {
             get
             {
